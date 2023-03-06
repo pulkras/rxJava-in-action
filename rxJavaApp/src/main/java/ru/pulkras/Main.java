@@ -1,23 +1,29 @@
 package ru.pulkras;
 
+import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.disposables.Disposable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Observable<String> observable = Observable.create(emitter -> {
-                emitter.onNext("Click 1");
-                emitter.onNext("Click 2");
-                emitter.onNext("Click 3");
-//                throw new Exception("just a error");
-                emitter.onComplete();
-        });
+        JustObservable justObservable = new JustObservable();
+        WorkWithStringType workWithStringType = new WorkWithStringType();
+        WorkWithIntegerType workWithIntegerType = new WorkWithIntegerType();
+        SingleObservable singleObservable = new SingleObservable();
 
-        observable.subscribe(item -> {
-            System.out.println(item);
-        }, throwable -> {
-            System.out.println(throwable.getMessage());
-        }, () -> {
-            System.out.println("On complete");
-        });
+        justObservable.workWithObservable();
+        justObservable.observableWithIntegerRange();
+
+        workWithStringType.observableAndObserverWithString();
+        workWithIntegerType.observableAndObserverWithInteger();
+
+//        justObservable.observableWithLongInterval();
+//        justObservable.observableWithTimer();
+
+        singleObservable.exampleOfSingleObservable();
     }
 }
