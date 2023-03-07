@@ -28,7 +28,7 @@ public class SingleObservable {
         });
     }
 
-    public Single<String> createSingle() {
+    private Single<String> createSingle() {
         return Single.create(emitter -> {
             String user = fetchUser();
 
@@ -39,7 +39,7 @@ public class SingleObservable {
         });
     }
 
-    public static String fetchUser() {
+    private String fetchUser() {
 //        return "Jong";
         return null;
     }

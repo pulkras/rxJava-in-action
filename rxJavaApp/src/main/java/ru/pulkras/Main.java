@@ -14,6 +14,9 @@ public class Main {
         WorkWithStringType workWithStringType = new WorkWithStringType();
         WorkWithIntegerType workWithIntegerType = new WorkWithIntegerType();
         SingleObservable singleObservable = new SingleObservable();
+        MaybeObservable maybeObservable = new MaybeObservable();
+        CompletableExample completableExample = new CompletableExample();
+
 
         justObservable.workWithObservable();
         justObservable.observableWithIntegerRange();
@@ -24,6 +27,9 @@ public class Main {
 //        justObservable.observableWithLongInterval();
 //        justObservable.observableWithTimer();
 
-        singleObservable.exampleOfSingleObservable();
+//        singleObservable.exampleOfSingleObservable();
+        maybeObservable.exampleOfMaybeObserver();
+
+        completableExample.exampleOfCompletable();
     }
 }
