@@ -1,4 +1,4 @@
-package ru.pulkras;
+package ru.pulkras.completables;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Completable;
