@@ -17,5 +17,11 @@ public class HotObservable {
         });
 
         Thread.sleep(5000);
+
+        observable.subscribe((item) -> {
+            System.out.println("Observer 2, sec: " + item);
+        });
+
+        Thread.sleep(100000);
     }
 }
