@@ -26,5 +26,4 @@ public class FilteringOperators {
         Observable observable6 = (Observable) Observable.just(2, 3, 4, 5) // last
                 .last(-1)
                 .subscribe(item -> System.out.print(item + " ")); // 5
-
 }

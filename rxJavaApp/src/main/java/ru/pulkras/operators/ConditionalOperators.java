@@ -19,6 +19,7 @@ public class ConditionalOperators {
             .any(item -> item.length() == 3)
             .subscribe(item -> System.out.println(item)); // false
 
+
     Observable observable5 = (Observable) Observable.just("jack", "tuck", "luck") // defaultIffEmpty
             .filter(item -> item.length() == 3)
             .defaultIfEmpty("ABC")
