@@ -15,6 +15,8 @@ public class Main {
         WorkWithStringType workWithStringType = new WorkWithStringType();
         WorkWithIntegerType workWithIntegerType = new WorkWithIntegerType();
 
+        ObservableWithSubscribeOn observableWithSubscribeOn = new ObservableWithSubscribeOn();
+
         justObservable.workWithObservable();
         justObservable.observableWithIntegerRange();
 
@@ -23,6 +25,8 @@ public class Main {
 
 //        justObservable.observableWithLongInterval();
 //        justObservable.observableWithTimer();
+
+        observableWithSubscribeOn.workWithSubscribeOn();
 
     }
 }
