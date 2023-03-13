@@ -1,13 +1,5 @@
 package ru.pulkras.justObservables;
 
-import ru.pulkras.completables.CompletableExample;
-import ru.pulkras.coldAndHot.ColdObservable;
-import ru.pulkras.coldAndHot.HotObservable;
-import ru.pulkras.singleAndMaybe.MaybeObservable;
-import ru.pulkras.singleAndMaybe.SingleObservable;
-import ru.pulkras.syncAndAsync.SyncAndAsyncFlowables;
-import ru.pulkras.syncAndAsync.SyncAndAsyncObservables;
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         JustObservable justObservable = new JustObservable();
@@ -16,6 +8,7 @@ public class Main {
         WorkWithIntegerType workWithIntegerType = new WorkWithIntegerType();
 
         ObservableWithSubscribeOn observableWithSubscribeOn = new ObservableWithSubscribeOn();
+        ObservableWithObserveOn observalbeWithObserveOn = new ObservableWithObserveOn();
 
         justObservable.workWithObservable();
         justObservable.observableWithIntegerRange();
@@ -27,6 +20,7 @@ public class Main {
 //        justObservable.observableWithTimer();
 
         observableWithSubscribeOn.workWithSubscribeOn();
+        observalbeWithObserveOn.observeOnExample();
 
     }
 }
